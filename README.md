@@ -9,4 +9,12 @@ npm install victor-smart-kill
 
 ## Examples
 
-Please see [demo.js](demo.js) for examples.
+Create a file called "login.json" that looks like this:
+```
+{
+    "username": "me@email.com",
+    "password" "mypassword"
+}
+```
+
+Then run [demo.js](demo.js).

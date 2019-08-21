@@ -1,6 +1,6 @@
 {
   "name": "victor-smart-kill",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Interface to Victor Smart Kill mousetraps",
   "main": "index.js",
   "scripts": {

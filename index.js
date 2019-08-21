@@ -27,28 +27,7 @@ async function get_token(username, password) {
     });
 }
 
-function callback(error, response, body)
-{
-    if (!error && response.statusCode == 200) {
-        const info = JSON.parse(body);
-        for (var ii in info['results']) {
-            var obj = info['results'][ii];
-            var name = obj['name'];
-            var kill_presents = parseInt(obj['trapstatistics']['kills_present']);
-            if (kill_presents == 0) {
-                console.log(name.concat(" - 0"));
-            }
-            else {
-                console.log(name.concat(" - ").concat(kill_presents));
-            }
-        }
-    }
-    else{
-        console.log(response);
-    }
-}
-
-async function check_traps(username, password) {
+async function check_traps(username, password, callback) {
     try {
         await get_token(username, password);
     

@@ -1,6 +1,6 @@
 {
   "name": "victor-smart-kill",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Interface to Victor Smart Kill mousetraps",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/dwwkelly/victor_smart_kill_js#readme",
   "dependencies": {
-    "request": "^4.0.0"
+    "request-promise": "^4.0.0"
   }
 }

@@ -22,12 +22,12 @@ async function get_token(username, password) {
             }
             token = JSON.parse(body)['token'];
             resolve(token);
-            console.log("doesn't have token, fetched it - ".concat(this.token));
+            console.log("doesn't have token, fetched it - ".concat(token));
         });
     });
 }
 
-async function check_traps(username, password, callback) {
+async function check_traps(username, password, callback, callback_obj) {
     try {
         await get_token(username, password);
     
@@ -44,8 +44,7 @@ async function check_traps(username, password, callback) {
               'content-length': '0'
           }
         };
-        response = await request(options, callback);
-        //console.log(response);
+        response = await request(options, callback.bind(callback_obj));
     } catch (error) {
         console.error('ERROR:');
         console.error(error);

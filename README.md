@@ -13,7 +13,7 @@ Create a file called "login.json" that looks like this:
 ```
 {
     "username": "me@email.com",
-    "password" "mypassword"
+    "password": "mypassword"
 }
 ```
 
